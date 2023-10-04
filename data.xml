@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WMWROOT xmlns="http://www.manh.com/ILSNET/Interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.manh.com/ILSNET/Interface schema.xsd">
+  <WMWDATA>
+    <Shipments>
+      <Shipment>
+        <Action>Save</Action>
+        <UserDef6>CAMIONETA FM</UserDef6>
+        <UserDef8>356</UserDef8>
+        <AllocateComplete>N</AllocateComplete>
+        <Comments>
+          <Comment>
+            <CommentType>Comentario1</CommentType>
+            <Text>ATN. LILIANA MARTINEZ ROMERO</Text>
+          </Comment>
+          <Comment>
+            <CommentType>Comentario3</CommentType>
+            <Text>CL:CLIENTE DE TIENDA </Text>
+          </Comment>
+        </Comments>
+        <ConsolidationAllowed>Y</ConsolidationAllowed>
+        <Customer>
+          <Carrier>Camioneta FM</Carrier>
+          <CarrierService>Camioneta FM</CarrierService>
+          <Company>FM</Company>
+          <CustomerAddress>
+            <Name>Mex-Polanco</Name>
+          </CustomerAddress>
+          <Customer>Mex-Polanco</Customer>
+          <CustomerCategories>
+            <Category1>CLIMX</Category1>
+            <Category10>101</Category10>
+            <Category2>STG POLANCO</Category2>
+            <Category8>Y</Category8>
+          </CustomerCategories>
+          <ShipTo>CLIENTE DE TIENDA </ShipTo>
+          <ShipToAddress>
+            <Address1>Mariano Escobedo #151</Address1>
+            <Address2>Anahuac</Address2>
+            <Address3>Miguel Hidalgo</Address3>
+            <City>Mexico</City>
+            <Country>MX</Country>
+            <Name>LILIANA MARTÍNEZ ROMERO</Name>
+            <PostalCode>11320</PostalCode>
+            <State>CDMX</State>
+          </ShipToAddress>
+        </Customer>
+        <CustomerPO>69253</CustomerPO>
+        <ErpOrder>356-C-444-69253</ErpOrder>
+        <OrderDate>2023-09-18T13:02:43</OrderDate>
+        <OrderType>CLIMX</OrderType>
+        <Priority>444</Priority>
+        <ShipmentId>356-C-444-69253</ShipmentId>
+        <UserDef13>--</UserDef13>
+        <Warehouse>Mariano</Warehouse>
+        <Details>
+          <ShipmentDetail>
+            <Action>Save</Action>
+            <ErpOrder>356-69253</ErpOrder>
+            <ErpOrderLineNum>1831671</ErpOrderLineNum>
+            <RequestedQty>36</RequestedQty>
+            <SKU>
+              <Company>FM</Company>
+              <Item>5204-5285-15324</Item>
+              <Quantity>36</Quantity>
+              <QuantityUm>PZ</QuantityUm>
+            </SKU>
+            <TotalQuantity>36</TotalQuantity>
+          </ShipmentDetail>
+        </Details>
+      </Shipment>
+    </Shipments>
+  </WMWDATA>
+</WMWROOT>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Pedidos Tiendas</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <h1>Pedidos Tiendas</h1>
+  <!-- Botones de Upload -->
+  <div class="container-upload">
+    <div class="box">
+      <input type="file" name="data" id="data" class="inputfile" />
+      <label for="data">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+          <path fill="white"
+            d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+          </path>
+        </svg>
+        <span>Archivo.xml</span>
+      </label>
+    </div>
+  </div>
+
+  <main>
+    <div class="info">
+      <p class="info-title">Customer:&nbsp;<span id="customerId">Name</span></p>
+      <p class="info-title">Ship to:&nbsp;<span id="shipToId">Name</span></p>
+      <p class="info-title">Ship to name:&nbsp;<span id="shipToNameId">Name</span></p>
+      <p class="info-title">Shipment Id:&nbsp;<span id="shipmentId">Name</span></p>
+      <button class="mas-detalles">
+        Más detalles
+      </button>
+    </div>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th style="border-right: 1px solid white">No</th>
+          <th style="border-right: 1px solid white">Item</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <div class="archivo-info">
+    <p class="archivo-info-desc">Nombre del Archivo</p>
+    <p class="archivo-info-name">OriginalFiles.xml</p>
+  </div>
+
+
+  <script type="module" src="./index.js"></script>
+  <script type="module" src="./uploadData.js"></script>
+</body>
+
+</html>
