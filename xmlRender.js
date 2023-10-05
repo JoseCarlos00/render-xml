@@ -1,4 +1,6 @@
-export function xmlRender(xmlDocumnet) {
+export function xmlRender(xmlDocumnet, table) {
+  let tablaSelected = table ?? "pedido1";
+
   const sku = xmlDocumnet.querySelectorAll("SKU");
 
   //Obteniendo datos de las cabeceras
@@ -8,16 +10,14 @@ export function xmlRender(xmlDocumnet) {
   const shipmentId = xmlDocumnet.querySelector('ShipmentId').innerHTML;
 
   /*  Insertar datos al DOOM */
-  //Elementos de thead
-  const tableThead = document.querySelector("body > main > table > thead");
 
   //Parafos Info
-  const tagCustomer = document.querySelector('#customerId');
-  const tagShipTo = document.querySelector('#shipToId');
-  const tagShitToName = document.querySelector('#shipToNameId');
-  const tagShipmentId = document.querySelector('#shipmentId');
+  const tagCustomer = document.querySelector(`section.${tablaSelected} .customerId`);
+  const tagShipTo = document.querySelector(`section.${tablaSelected} .shipToId`);
+  const tagShitToName = document.querySelector(`section.${tablaSelected} .shipToNameId`);
+  const tagShipmentId = document.querySelector(`section.${tablaSelected} .shipmentId`);
 
-      //Agregando contenido a las filas
+  //Agregando contenido a las filas
   tagCustomer.innerHTML = customer;
   tagShipTo.innerHTML = shipTo;
   tagShitToName.innerHTML = shipToName;
@@ -25,43 +25,43 @@ export function xmlRender(xmlDocumnet) {
 
 
   //Agreganddo atributos a los elementos de Thead
-  const elementosThead = document.querySelectorAll('main > table > thead > tr');
+  const elementosThead = document.querySelectorAll(`main > section.${tablaSelected} > table > thead > tr`);
 
   elementosThead.forEach((tr, index) => {
-      if (index !== elementosThead.length -1) {
+    if (index !== elementosThead.length - 1) {
       tr.firstElementChild.setAttribute('colspan', '3');
-      } 
+    }
   });
 
   //Tabla Body
-  const tbody = document.querySelector("body > main > table > tbody");
+  const tbody = document.querySelector(`body > main > section.${tablaSelected} > table > tbody`);
 
   sku.forEach((item) => {
-      const tr = document.createElement('tr');
-      const tdNumero = document.createElement('td');
-      const tdItem = document.createElement('td');
-      const tdQuantity = document.createElement('td');
-      
-      const tags = item.childNodes;
+    const tr = document.createElement('tr');
+    const tdNumero = document.createElement('td');
+    const tdItem = document.createElement('td');
+    const tdQuantity = document.createElement('td');
 
-      tags.forEach((children, index) => {
-        
-          if (index === 3) {
-            tdItem.innerHTML = children.innerHTML;
-          } 
-          if (index === 5) {
-           tdQuantity.innerHTML = children.innerHTML;
-          }
+    const tags = item.childNodes;
 
-          tr.appendChild(tdNumero);
-          tr.appendChild(tdItem);
-          tr.appendChild(tdQuantity);
-      })
-      tbody.appendChild(tr)
+    tags.forEach((children, index) => {
+
+      if (index === 3) {
+        tdItem.innerHTML = children.innerHTML;
+      }
+      if (index === 5) {
+        tdQuantity.innerHTML = children.innerHTML;
+      }
+
+      tr.appendChild(tdNumero);
+      tr.appendChild(tdItem);
+      tr.appendChild(tdQuantity);
+    })
+    tbody.appendChild(tr)
   })
 
   /**Enumerar fila */
-  const tdbody = document.querySelector("body > main > table > tbody").childNodes;
+  const tdbody = document.querySelector(`body > main > section.${tablaSelected} table > tbody`).childNodes;
   let iterador = 1;
 
   tdbody.forEach((tr) => {
