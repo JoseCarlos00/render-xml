@@ -3,6 +3,7 @@
   <head>
     <title>Pedidos Tiendas</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +12,6 @@
   <body>
     <header>
       <h1>Pedidos Tiendas</h1>
-      <div class="archivo-info">
-        <p class="archivo-info-desc">Nombre del Archivo</p>
-        <p class="archivo-info-name">OriginalFiles.xml</p>
-      </div>
     </header>
 
     <!-- Botones de Upload -->
@@ -91,7 +88,11 @@
           <p class="info-title">
             Shipment Id:&nbsp;<span class="shipmentId">Name</span>
           </p>
-          <button class="mas-detalles">Más detalles</button>
+          <button
+            class="mas-detalles show-detail nameArchivo"
+            data-tooltip="OriginalFiles.xml">
+            Más detalles
+          </button>
         </div>
         <br />
         <table>
@@ -107,7 +108,7 @@
       </section>
 
       <!-- Pedido 2 -->
-      <section class="pedido2">
+      <section class="pedido2" style="display: none; opacity: 0">
         <div class="info">
           <p class="info-title">
             Customer:&nbsp;<span class="customerId">Name</span>
@@ -121,7 +122,11 @@
           <p class="info-title">
             Shipment Id:&nbsp;<span class="shipmentId">Name</span>
           </p>
-          <button class="mas-detalles">Más detalles</button>
+          <button
+            class="mas-detalles show-detail nameArchivo"
+            data-tooltip="OriginalFiles.xml">
+            Más detalles
+          </button>
         </div>
         <br />
         <table>
@@ -136,6 +141,13 @@
         </table>
       </section>
     </main>
+
+    <script>
+      const btnCompartion = document.querySelector("#comparation");
+      btnCompartion.addEventListener("click", () => {
+        document.querySelector(".pedido2").removeAttribute("style");
+      });
+    </script>
 
     <script type="module" src="./index.js"></script>
     <script type="module" src="./uploadData.js"></script>
