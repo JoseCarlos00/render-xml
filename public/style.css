@@ -104,7 +104,11 @@ table {
 }
 
 table tbody {
-  text-align: center;
+  text-align: justify;
+}
+
+table tbody tr td {
+  padding-left: 1.5rem;
 }
 
 table tbody > :nth-child(2n) {
