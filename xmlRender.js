@@ -34,7 +34,7 @@ export function xmlRender(xmlDocumnet, table) {
   });
 
   //Tabla Body
-  const tbody = document.querySelector(`body > main > section.${tablaSelected} > table > tbody`);
+  const tbody = document.querySelector(`body > main  section.${tablaSelected}  table  .tbody`);
 
   sku.forEach((item) => {
     const tr = document.createElement('tr');
@@ -61,7 +61,7 @@ export function xmlRender(xmlDocumnet, table) {
   })
 
   /**Enumerar fila */
-  const tdbody = document.querySelector(`body > main > section.${tablaSelected} table > tbody`).childNodes;
+  const tdbody = document.querySelector(`body > main > section.${tablaSelected} table  .tbody`).childNodes;
   let iterador = 1;
 
   tdbody.forEach((tr) => {

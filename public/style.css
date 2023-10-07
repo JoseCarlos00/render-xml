@@ -67,35 +67,30 @@ main {
   width: 100%;
   padding: 0px 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 30px;
-  height: 200px;
+  height: 100px;
   position: relative;
-
-
-  & .info-title {
-    /* border: 1px solid; */
-    padding: 2px;
-    font-weight: bold;
-  }
-
-  & .info-title span {
-    font-weight: 200;
-  }
 
 }
 
 
 /* Estilos Tablas */
+table,
+td, th {
+  border: 1px solid black;
+}
+
+.table {
+  margin-top: 30px;
+}
+
+.table td {
+  padding: 2px 4px;
+}
+
 th {
   background-color: black;
   color: white;
-}
-
-table,
-td,
-th {
-  border: 1px solid black;
-  padding: 2px 4px;
+  border-color: #fff;
 }
 
 table {
@@ -107,11 +102,11 @@ table tbody {
   text-align: justify;
 }
 
-table tbody tr td {
+table .tbody tr td {
   padding-left: 1.5rem;
 }
 
-table tbody > :nth-child(2n) {
+table .tbody > :nth-child(2n) {
   background-color: #bd9fda;
   ;
 }
@@ -239,8 +234,7 @@ table tbody > :nth-child(2n) {
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
 
-  position: absolute;
-  bottom: 1px;
+  position: relative;
 }
 
 .mas-detalles::before {
@@ -271,8 +265,10 @@ table tbody > :nth-child(2n) {
   font-size: 0.75rem;
   color: #111;
   border-radius: .25em;
+  text-align: justify;
 
   bottom: -41px !important;
+  width: 400% !important;
 }
 
 .nameArchivo::before {

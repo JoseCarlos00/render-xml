@@ -6,7 +6,7 @@ document.querySelectorAll("input[type=file]").forEach(item => {
     // console.log(e);
     const tablaSelected = item.getAttribute('tablaSelected');
     const fileInput = document.querySelector(`#${e.target.id}`)
-
+    
     // Aquí se ejecutará cuando el usuario seleccione un archivo
     const selectedFile = e.target.files[ 0 ]; // Obtiene el primer archivo seleccionado
 
@@ -23,6 +23,7 @@ document.querySelectorAll("input[type=file]").forEach(item => {
 
 
 function readFile(file, tablaSelected) {
+  
   const reader = new FileReader();
   reader.onload = function (e) {
     // La función onload se ejecuta cuando se completa la lectura del archivo
@@ -32,12 +33,12 @@ function readFile(file, tablaSelected) {
     const xmlDocumnet = parser.parseFromString(fileContent, 'text/xml');
 
     // remplazamos el contenido del tbody
-    const table = document.querySelector(`main > section.${tablaSelected} > table`);
-    const tbody = document.querySelector(`main > section.${tablaSelected} > table > tbody`);
+    const table = document.querySelector(`main > section.${tablaSelected}  .table`);
+    const tbody = document.querySelector(`main > section.${tablaSelected}  .table  .tbody`);
     const newTbody = document.createElement('tbody');
+    newTbody.classList.add('tbody')
 
     table.replaceChild(newTbody, tbody);
-
     xmlRender(xmlDocumnet, tablaSelected);
   };
 
