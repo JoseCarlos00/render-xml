@@ -55,8 +55,9 @@
   </div>
 
   <main>
+    <!-- Pedido 1 -->
     <section class="pedido1">
-      <table class="info">
+      <table class="info tabla-info">
         <tr>
           <th>Customer:</th>
           <td><span class="customerId">Name</span></td>
@@ -78,24 +79,29 @@
         <button class="mas-detalles show-detail nameArchivo" data-tooltip="OriginalFiles.xml">
           Más detalles
         </button>
+        <!-- botón para copiar la tabla info -->
+        <button tablaSelected="pedido1" class="boton-copiar-info">Copiar tabla info</button>
+        <!-- botón para copiar la tabla items -->
+        <button tablaSelected="pedido1" class="boton-copiar-items">Copiar tabla items</button>
       </div>
       <br />
-      <table class="table">
+      <table class="table tabla-items">
         <thead>
           <tr>
-            <th>No</th>
-            <th>Item</th>
+            <th style="border-right: 1px solid white">No</th>
+            <th style="border-right: 1px solid white">Item</th>
             <th>Quantity</th>
           </tr>
         </thead>
         <tbody class="tbody"></tbody>
       </table>
+      
     </section>
 
     <!-- Pedido 2 -->
     <section class="pedido2" style="display: none; opacity: 0">
      
-      <table class="info">
+      <table class="info tabla-info">
         <tr>
           <th>Customer:</th>
           <td><span class="customerId">Name</span></td>
@@ -117,9 +123,13 @@
         <button class="mas-detalles show-detail nameArchivo" data-tooltip="OriginalFiles.xml">
           Más detalles
         </button>
+        <!-- botón para copiar la tabla info -->
+        <button tablaSelected="pedido2" class="boton-copiar-info">Copiar tabla info</button>
+        <!-- botón para copiar la tabla items -->
+        <button tablaSelected="pedido2" class="boton-copiar-items">Copiar tabla items</button>
       </div>
       <br />
-      <table class="table">
+      <table class="table tabla-items">
         <thead>
           <tr>
             <th style="border-right: 1px solid white">No</th>
@@ -141,6 +151,7 @@
 
   <script type="module" src="./index.js"></script>
   <script type="module" src="./uploadData.js"></script>
+  <script src="./clipboar.js"></script>
 </body>
 
 </html>
