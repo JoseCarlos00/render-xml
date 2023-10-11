@@ -113,6 +113,23 @@ table .tbody > :nth-child(2n) {
   ;
 }
 
+table.tabla-info :is(th, td ){
+  text-align: left;
+}
+
+table.tabla-info {
+  & th {
+    border-color: #fff #000;
+  }
+
+  & tr:first-child th{
+    border-top-color: #000;
+  }
+
+  & tr:last-child th {
+    border-bottom-color: #000;
+  }
+}
 /* End Tablas */
 
 
