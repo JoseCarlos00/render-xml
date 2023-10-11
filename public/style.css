@@ -46,19 +46,20 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 335px;
-
-    transition: opacity 1s ease-in;
   }
 
   & .pedido1 {
+    position: relative;
     justify-content: center;
     flex: 1;
   }
 
   & .pedido2 {
+    position: relative;
     opacity: 1;
     justify-content: center;
     flex: 1;
+    transition: opacity 300ms ease-in 0s;
   }
 }
 
@@ -80,6 +81,7 @@ td, th {
 }
 
 .table {
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -289,4 +291,9 @@ table .tbody > :nth-child(2n) {
     min-width: 0;
     gap: 50px;
   }
+}
+
+/* Boton Copiar */
+.boton-copiar:hover {
+  background: #000 !important;
 }
