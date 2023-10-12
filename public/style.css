@@ -76,13 +76,13 @@ main {
 
 /* Estilos Tablas */
 table,
-td, th {
+td,
+th {
   border: 1px solid black;
 }
 
 .table {
   width: 100%;
-  margin-top: 30px;
 }
 
 .table td {
@@ -92,7 +92,6 @@ td, th {
 th {
   background-color: black;
   color: white;
-  /* border-color: #fff; */
 }
 
 table {
@@ -113,7 +112,7 @@ table .tbody > :nth-child(2n) {
   ;
 }
 
-table.tabla-info :is(th, td ){
+table.tabla-info :is(th, td) {
   text-align: left;
 }
 
@@ -122,7 +121,7 @@ table.tabla-info {
     border-color: #fff #000;
   }
 
-  & tr:first-child th{
+  & tr:first-child th {
     border-top-color: #000;
   }
 
@@ -130,6 +129,7 @@ table.tabla-info {
     border-bottom-color: #000;
   }
 }
+
 /* End Tablas */
 
 
@@ -313,4 +313,128 @@ table.tabla-info {
 /* Boton Copiar */
 .boton-copiar:hover {
   background: #000 !important;
+}
+
+/* Boton Copiar Items */
+.container-boton-copiar-items-modify {
+
+  width: fit-content;
+  padding-bottom: 3px;
+  transition: opacity 300ms ease-in 0s;
+
+  /* tooltip settings 👇 */
+  .copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #000000;
+    --button-text-color: #fff;
+    --button-hover-text-color: #fff;
+    --button-border-radius: 5px;
+    --button-diameter: 24px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    --tooltip-transition-duration: 0.5s;
+  }
+
+  .copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .tooltip::before {
+    content: attr(data-text-initial);
+  }
+
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+  }
+
+  .copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .checkmark {
+    display: none;
+  }
+
+  /* actions */
+  .copy:hover .tooltip,
+  .copy:focus:not(:focus-visible) .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+  }
+
+  .copy:focus:not(:focus-visible) .tooltip::before {
+    content: attr(data-text-end);
+  }
+
+  .copy:focus:not(:focus-visible) .clipboard {
+    display: none;
+  }
+
+  .copy:focus:not(:focus-visible) .checkmark {
+    display: block;
+  }
+
+  .copy:hover,
+  .copy:focus {
+    background-color: var(--button-hover-bg);
+  }
+
+  .copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+  }
+
+  .copy:hover svg {
+    color: var(--button-hover-text-color);
+  }
 }
