@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>Pedidos Tiendas</title>
-    <link rel="stylesheet" href="./public/style.css" />
-    <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+<head>
+  <title>Pedidos Tiendas</title>
+  <link rel="stylesheet" href="./public/style.css" />
+  <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon" />
 
-  <body>
-    <header>
-      <h1>Pedidos Tiendas</h1>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <!-- Botones de Upload -->
-    <div class="container-archivos">
-      <div class="container-upload">
-        <input
-          tablaSelected="pedido1"
-          type="file"
-          name="data"
-          id="data"
-          class="inputfile"
-          hidden />
-        <label for="data">
-          <div class="button">
-            <div class="button-wrapper">
-              <div class="text">Archivo.xml</div>
-              <span class="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="17"
-                  viewBox="0 0 20 17">
-                  <path
-                    fill="white"
-                    d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
-                </svg>
-              </span>
-            </div>
+<body>
+  <header>
+    <h1>Pedidos Tiendas</h1>
+  </header>
+
+  <!-- Botones de Upload -->
+  <div class="container-archivos">
+    <div class="container-upload upload" title="Arrastra y suelta aquí o haz clic para seleccionar">
+      <input tablaselected="pedido1" type="file" name="data" id="data" class="inputfile" hidden>
+      <label for="data">
+        <div class="button">
+          <div class="button-wrapper">
+            <div class="text" tablaselected="pedido1">Archivo.xml</div>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="white"
+                  d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                </path>
+              </svg>
+            </span>
           </div>
-        </label>
-      </div>
-
-      <div class="container-conparation">
-        <input
-          tablaSelected="pedido2"
-          type="file"
-          name="comparation"
-          id="comparation"
-          class="inputfile"
-          hidden />
-        <label for="comparation">
-          <div class="button">
-            <div class="button-wrapper">
-              <div class="text">Comparación</div>
-              <span class="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="17"
-                  viewBox="0 0 20 17">
-                  <path
-                    fill="white"
-                    d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
-                </svg>
-              </span>
-            </div>
-          </div>
-        </label>
-      </div>
+        </div>
+      </label>
     </div>
 
-    <main>
-      <!-- Pedido 1 -->
-      <section class="pedido1">
-        <div class="container-tabla-info">
-          <!-- Boton Copiar -->
-          <div
-            tablaSelected="pedido1"
-            class="boton-copiar-info"
-            style="
+    <div class="container-conparation upload" title="Arrastra y suelta aquí o haz clic para seleccionar">
+      <input tablaSelected="pedido2" type="file" name="comparation" id="comparation" class="inputfile" hidden />
+      <label for="comparation">
+        <div class="button">
+          <div class="button-wrapper">
+            <div class="text" tablaselected="pedido2">Comparación</div>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="white"
+                  d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                </path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <main>
+    <!-- Pedido 1 -->
+    <section class="pedido1">
+      <div class="container-tabla-info">
+        <!-- Boton Copiar -->
+        <div tablaSelected="pedido1" class="boton-copiar-info" style="
               position: absolute;
               top: -26px;
               right: 0px;
@@ -95,13 +73,9 @@
               opacity: 0;
               transition: opacity 300ms ease-in 0s;
             ">
-            <span
-              data-text-end="Copiado!"
-              data-text-initial="Copiar Items"
-              class="tooltip">
-            </span>
-            <div
-              style="
+          <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip">
+          </span>
+          <div style="
                 color: rgba(255, 255, 255, 0.443);
                 display: flex;
                 align-items: center;
@@ -110,11 +84,7 @@
                 margin-top: 4px;
                 margin-right: 0;
               ">
-              <div
-                class="boton-copiar"
-                role="button"
-                tabindex="0"
-                style="
+            <div class="boton-copiar" role="button" tabindex="0" style="
                   user-select: none;
                   transition: background 20ms ease-in 0s;
                   cursor: pointer;
@@ -130,11 +100,7 @@
                   background: rgb(37, 37, 37);
                   font-weight: 400;
                 ">
-                <svg
-                  role="graphics-symbol"
-                  viewBox="0 0 14 16"
-                  class="copy"
-                  style="
+              <svg role="graphics-symbol" viewBox="0 0 14 16" class="copy" style="
                     width: 16px;
                     height: 16px;
                     display: block;
@@ -142,101 +108,71 @@
                     flex-shrink: 0;
                     padding-right: 4px;
                   ">
-                  <path
-                    d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z"></path>
-                </svg>
-                Copiar
-              </div>
+                <path
+                  d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z">
+                </path>
+              </svg>
+              Copiar
             </div>
           </div>
-          <table class="info tabla-info" tablaSelected="pedido2">
-            <tr>
-              <th>Customer:</th>
-              <td><span class="customerId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Ship to:</th>
-              <td><span class="shipToId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Ship to name:</th>
-              <td><span class="shipToNameId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Shipment Id:</th>
-              <td><span class="shipmentId">Name</span></td>
-            </tr>
-          </table>
-          <div>
-            <button
-              class="mas-detalles show-detail nameArchivo"
-              data-tooltip="OriginalFiles.xml">
-              Más detalles
-            </button>
-          </div>
+        </div>
+        <table class="info tabla-info" tablaSelected="pedido2">
+          <tr>
+            <th>Customer:</th>
+            <td><span class="customerId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Ship to:</th>
+            <td><span class="shipToId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Ship to name:</th>
+            <td><span class="shipToNameId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Shipment Id:</th>
+            <td><span class="shipmentId">Name</span></td>
+          </tr>
+        </table>
+        <div>
+          <button class="mas-detalles show-detail nameArchivo" data-tooltip="OriginalFiles.xml"> Más detalles </button>
+        </div>
+      </div>
+
+      <!-- Breack -->
+      <div style="margin: 12.5px 0"></div>
+
+      <!-- tabla-items -->
+      <div class="container-tabla-items" style="position: relative">
+        <!-- Boton Copiar Items Modificado -->
+        <div class="container-boton-copiar-items-modify" style="opacity: 0">
+          <button tablaSelected="pedido1" class="copy boton-copiar-items-modify">
+            <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip"></span>
+            <span>
+              <svg xml:space="preserve" style="enable-background: new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0"
+                height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                <g>
+                  <path fill="currentColor"
+                    d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                  </path>
+                </g>
+              </svg>
+              <svg xml:space="preserve" style="enable-background: new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0"
+                height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                <g>
+                  <path data-original="#000000" fill="currentColor"
+                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                  </path>
+                </g>
+              </svg>
+            </span>
+          </button>
         </div>
 
-        <!-- Breack -->
-        <div style="margin: 12.5px 0"></div>
-
-        <!-- tabla-items -->
-        <div class="container-tabla-items" style="position: relative">
-          <!-- Boton Copiar Items Modificado -->
-          <div class="container-boton-copiar-items-modify" style="opacity: 0">
-            <button
-              tablaSelected="pedido1"
-              class="copy boton-copiar-items-modify">
-              <span
-                data-text-end="Copiado!"
-                data-text-initial="Copiar Items"
-                class="tooltip"></span>
-              <span>
-                <svg
-                  xml:space="preserve"
-                  style="enable-background: new 0 0 512 512"
-                  viewBox="0 0 6.35 6.35"
-                  y="0"
-                  x="0"
-                  height="20"
-                  width="20"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="clipboard">
-                  <g>
-                    <path
-                      fill="currentColor"
-                      d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path>
-                  </g>
-                </svg>
-                <svg
-                  xml:space="preserve"
-                  style="enable-background: new 0 0 512 512"
-                  viewBox="0 0 24 24"
-                  y="0"
-                  x="0"
-                  height="18"
-                  width="18"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="checkmark">
-                  <g>
-                    <path
-                      data-original="#000000"
-                      fill="currentColor"
-                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
-                  </g>
-                </svg>
-              </span>
-            </button>
-          </div>
-
-          <!-- Boton Copiar -->
-          <div
-            tablaSelected="pedido1"
-            class="boton-copiar-items"
-            style="
+        <!-- Boton Copiar -->
+        <div tablaSelected="pedido1" class="boton-copiar-items" style="
               position: absolute;
               top: 0;
               right: 0px;
@@ -250,13 +186,9 @@
               opacity: 0;
               transition: opacity 300ms ease-in 0s;
             ">
-            <span
-              data-text-end="Copiado!"
-              data-text-initial="Copiar Items"
-              class="tooltip">
-            </span>
-            <div
-              style="
+          <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip">
+          </span>
+          <div style="
                 color: rgba(255, 255, 255, 0.443);
                 display: flex;
                 align-items: center;
@@ -265,11 +197,7 @@
                 margin-top: 4px;
                 margin-right: 0;
               ">
-              <div
-                class="boton-copiar"
-                role="button"
-                tabindex="0"
-                style="
+            <div class="boton-copiar" role="button" tabindex="0" style="
                   user-select: none;
                   transition: background 20ms ease-in 0s;
                   cursor: pointer;
@@ -285,11 +213,7 @@
                   background: rgb(37, 37, 37);
                   font-weight: 400;
                 ">
-                <svg
-                  role="graphics-symbol"
-                  viewBox="0 0 14 16"
-                  class="copy"
-                  style="
+              <svg role="graphics-symbol" viewBox="0 0 14 16" class="copy" style="
                     width: 16px;
                     height: 16px;
                     display: block;
@@ -297,34 +221,32 @@
                     flex-shrink: 0;
                     padding-right: 4px;
                   ">
-                  <path
-                    d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z"></path>
-                </svg>
-                Copiar
-              </div>
+                <path
+                  d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z">
+                </path>
+              </svg>
+              Copiar
             </div>
           </div>
-          <table class="table tabla-items" tablaSelected="pedido1">
-            <thead>
-              <tr>
-                <th style="border-right: 1px solid white">No</th>
-                <th style="border-right: 1px solid white">Item</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody class="tbody"></tbody>
-          </table>
         </div>
-      </section>
+        <table class="table tabla-items" tablaSelected="pedido1">
+          <thead>
+            <tr>
+              <th style="border-right: 1px solid white">No</th>
+              <th style="border-right: 1px solid white">Item</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+    </section>
 
-      <!-- Pedido 2 -->
-      <section class="pedido2" style="display: none; opacity: 0">
-        <div class="container-tabla-info">
-          <!-- Boton Copiar -->
-          <div
-            tablaSelected="pedido2"
-            class="boton-copiar-info"
-            style="
+    <!-- Pedido 2 -->
+    <section class="pedido2" style="display: none; opacity: 0">
+      <div class="container-tabla-info">
+        <!-- Boton Copiar -->
+        <div tablaSelected="pedido2" class="boton-copiar-info" style="
               position: absolute;
               top: -26px;
               right: 0px;
@@ -338,13 +260,9 @@
               opacity: 0;
               transition: opacity 300ms ease-in 0s;
             ">
-            <span
-              data-text-end="Copiado!"
-              data-text-initial="Copiar Items"
-              class="tooltip">
-            </span>
-            <div
-              style="
+          <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip">
+          </span>
+          <div style="
                 color: rgba(255, 255, 255, 0.443);
                 display: flex;
                 align-items: center;
@@ -353,11 +271,7 @@
                 margin-top: 4px;
                 margin-right: 0;
               ">
-              <div
-                class="boton-copiar"
-                role="button"
-                tabindex="0"
-                style="
+            <div class="boton-copiar" role="button" tabindex="0" style="
                   user-select: none;
                   transition: background 20ms ease-in 0s;
                   cursor: pointer;
@@ -373,11 +287,7 @@
                   background: rgb(37, 37, 37);
                   font-weight: 400;
                 ">
-                <svg
-                  role="graphics-symbol"
-                  viewBox="0 0 14 16"
-                  class="copy"
-                  style="
+              <svg role="graphics-symbol" viewBox="0 0 14 16" class="copy" style="
                     width: 16px;
                     height: 16px;
                     display: block;
@@ -385,100 +295,72 @@
                     flex-shrink: 0;
                     padding-right: 4px;
                   ">
-                  <path
-                    d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z"></path>
-                </svg>
-                Copiar
-              </div>
+                <path
+                  d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z">
+                </path>
+              </svg>
+              Copiar
             </div>
           </div>
-          <table class="info tabla-info" tablaSelected="pedido2">
-            <tr>
-              <th>Customer:</th>
-              <td><span class="customerId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Ship to:</th>
-              <td><span class="shipToId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Ship to name:</th>
-              <td><span class="shipToNameId">Name</span></td>
-            </tr>
-            <tr>
-              <th>Shipment Id:</th>
-              <td><span class="shipmentId">Name</span></td>
-            </tr>
-          </table>
-          <div>
-            <button
-              class="mas-detalles show-detail nameArchivo"
-              data-tooltip="OriginalFiles.xml">
-              Más detalles
-            </button>
-          </div>
+        </div>
+        <table class="info tabla-info" tablaSelected="pedido2">
+          <tr>
+            <th>Customer:</th>
+            <td><span class="customerId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Ship to:</th>
+            <td><span class="shipToId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Ship to name:</th>
+            <td><span class="shipToNameId">Name</span></td>
+          </tr>
+          <tr>
+            <th>Shipment Id:</th>
+            <td><span class="shipmentId">Name</span></td>
+          </tr>
+        </table>
+        <div>
+          <button class="mas-detalles show-detail nameArchivo" data-tooltip="OriginalFiles.xml">
+            Más detalles
+          </button>
+        </div>
+      </div>
+
+      <!-- Breack -->
+      <div style="margin: 12.5px 0"></div>
+      <!-- tabla-items -->
+      <div class="container-tabla-items" style="position: relative">
+        <!-- Boton Copiar Items Modificado -->
+        <div class="container-boton-copiar-items-modify" style="opacity: 0">
+          <button tablaSelected="pedido2" class="copy boton-copiar-items-modify">
+            <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip"></span>
+            <span>
+              <svg xml:space="preserve" style="enable-background: new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0"
+                height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                <g>
+                  <path fill="currentColor"
+                    d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                  </path>
+                </g>
+              </svg>
+              <svg xml:space="preserve" style="enable-background: new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0"
+                height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                <g>
+                  <path data-original="#000000" fill="currentColor"
+                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                  </path>
+                </g>
+              </svg>
+            </span>
+          </button>
         </div>
 
-        <!-- Breack -->
-        <div style="margin: 12.5px 0"></div>
-        <!-- tabla-items -->
-        <div class="container-tabla-items" style="position: relative">
-          <!-- Boton Copiar Items Modificado -->
-          <div class="container-boton-copiar-items-modify" style="opacity: 0">
-            <button
-              tablaSelected="pedido2"
-              class="copy boton-copiar-items-modify">
-              <span
-                data-text-end="Copiado!"
-                data-text-initial="Copiar Items"
-                class="tooltip"></span>
-              <span>
-                <svg
-                  xml:space="preserve"
-                  style="enable-background: new 0 0 512 512"
-                  viewBox="0 0 6.35 6.35"
-                  y="0"
-                  x="0"
-                  height="20"
-                  width="20"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="clipboard">
-                  <g>
-                    <path
-                      fill="currentColor"
-                      d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path>
-                  </g>
-                </svg>
-                <svg
-                  xml:space="preserve"
-                  style="enable-background: new 0 0 512 512"
-                  viewBox="0 0 24 24"
-                  y="0"
-                  x="0"
-                  height="18"
-                  width="18"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="checkmark">
-                  <g>
-                    <path
-                      data-original="#000000"
-                      fill="currentColor"
-                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
-                  </g>
-                </svg>
-              </span>
-            </button>
-          </div>
-
-          <!-- Boton Copiar -->
-          <div
-            tablaSelected="pedido2"
-            class="boton-copiar-items"
-            style="
+        <!-- Boton Copiar -->
+        <div tablaSelected="pedido2" class="boton-copiar-items" style="
               position: absolute;
               top: 0;
               right: 0px;
@@ -492,13 +374,9 @@
               opacity: 0;
               transition: opacity 300ms ease-in 0s;
             ">
-            <span
-              data-text-end="Copiado!"
-              data-text-initial="Copiar Items"
-              class="tooltip">
-            </span>
-            <div
-              style="
+          <span data-text-end="Copiado!" data-text-initial="Copiar Items" class="tooltip">
+          </span>
+          <div style="
                 color: rgba(255, 255, 255, 0.443);
                 display: flex;
                 align-items: center;
@@ -507,11 +385,7 @@
                 margin-top: 4px;
                 margin-right: 0;
               ">
-              <div
-                class="boton-copiar"
-                role="button"
-                tabindex="0"
-                style="
+            <div class="boton-copiar" role="button" tabindex="0" style="
                   user-select: none;
                   transition: background 20ms ease-in 0s;
                   cursor: pointer;
@@ -527,11 +401,7 @@
                   background: rgb(37, 37, 37);
                   font-weight: 400;
                 ">
-                <svg
-                  role="graphics-symbol"
-                  viewBox="0 0 14 16"
-                  class="copy"
-                  style="
+              <svg role="graphics-symbol" viewBox="0 0 14 16" class="copy" style="
                     width: 16px;
                     height: 16px;
                     display: block;
@@ -539,30 +409,28 @@
                     flex-shrink: 0;
                     padding-right: 4px;
                   ">
-                  <path
-                    d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z"></path>
-                </svg>
-                Copiar
-              </div>
+                <path
+                  d="M2.404 15.322h5.701c1.26 0 1.887-.662 1.887-1.927V12.38h1.154c1.254 0 1.91-.662 1.91-1.928V5.555c0-.774-.158-1.266-.626-1.74L9.512.837C9.066.387 8.545.21 7.865.21H5.463c-1.254 0-1.91.662-1.91 1.928v1.084H2.404c-1.254 0-1.91.668-1.91 1.933v8.239c0 1.265.656 1.927 1.91 1.927zm7.588-6.62c0-.792-.1-1.161-.592-1.665L6.225 3.814c-.452-.462-.844-.58-1.5-.591V2.215c0-.533.28-.832.843-.832h2.38v2.883c0 .726.386 1.113 1.107 1.113h2.83v4.998c0 .539-.276.832-.844.832H9.992V8.701zm-.79-4.29c-.206 0-.288-.088-.288-.287V1.594l2.771 2.818H9.201zM2.503 14.15c-.563 0-.844-.293-.844-.832V5.232c0-.539.281-.837.85-.837h1.91v3.187c0 .85.416 1.26 1.26 1.26h3.14v4.476c0 .54-.28.832-.843.832H2.504zM5.79 7.816c-.24 0-.346-.105-.346-.345V4.547l3.223 3.27H5.791z">
+                </path>
+              </svg>
+              Copiar
             </div>
           </div>
-          <table class="table tabla-items" tablaSelected="pedido2">
-            <thead>
-              <tr>
-                <th style="border-right: 1px solid white">No</th>
-                <th style="border-right: 1px solid white">Item</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody class="tbody"></tbody>
-          </table>
         </div>
-      </section>
+        <table class="table tabla-items" tablaSelected="pedido2">
+          <thead>
+            <tr>
+              <th style="border-right: 1px solid white">No</th>
+              <th style="border-right: 1px solid white">Item</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+    </section>
 
-      <div
-        id="alerta-copy"
-        aria-live="polite"
-        style="
+    <div id="alerta-copy" aria-live="polite" style="
           bottom: 24px;
           position: fixed;
           left: 0px;
@@ -575,8 +443,7 @@
           transition-duration: 270ms;
           transition-timing-function: ease;
         ">
-        <div
-          style="
+      <div style="
             background: rgb(47, 47, 47);
             color: rgb(211, 211, 211);
             border-radius: 8px;
@@ -589,21 +456,23 @@
             display: flex;
             align-items: center;
           ">
-          Copiado al portapapeles
-          <div style="margin-left: 4px; margin-right: -4px"></div>
-        </div>
+        Copiado al portapapeles
+        <div style="margin-left: 4px; margin-right: -4px"></div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script>
-      const btnCompartion = document.querySelector("#comparation");
-      btnCompartion.addEventListener("click", () => {
-        document.querySelector(".pedido2").removeAttribute("style");
-      });
-    </script>
+  <script>
+    const btnCompartion = document.querySelector("#comparation");
+    btnCompartion.addEventListener("click", () => {
+      document.querySelector(".pedido2").style.display = 'flex';
+      document.querySelector(".pedido2").style.opacity = 1;
+    });
+  </script>
 
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./uploadData.js"></script>
-    <script src="./clipboar.js"></script>
-  </body>
+  <script type="module" src="./index.js"></script>
+  <script type="module" src="./uploadData.js"></script>
+  <script src="./clipboar.js"></script>
+</body>
+
 </html>

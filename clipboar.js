@@ -16,8 +16,9 @@ document.querySelectorAll('.boton-copiar-items').forEach(item => {
     copyTablaItems(tablaItems);
   })
 })
+// END 
 
-
+/** Funciones de Copiado */
 async function copyTablaInfo(tablaInfo) {
   try {
     const textoInfo = tablaInfo.innerText;
