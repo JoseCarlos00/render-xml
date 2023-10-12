@@ -18,18 +18,28 @@ document.querySelectorAll('.boton-copiar-items').forEach(item => {
 })
 
 
-function copyTablaInfo(tablaInfo) {
-  const textoInfo = tablaInfo.innerText;
-  navigator.clipboard.writeText(textoInfo);
-
-  alert("Tabla info copiada al portapapeles");
+async function copyTablaInfo(tablaInfo) {
+  try {
+    const textoInfo = tablaInfo.innerText;
+    await navigator.clipboard.writeText(textoInfo);
+    alert("Tabla info copiada al portapapeles");
+  } 
+  catch (err) {
+      console.error('Error al copiar al portapapeles:', err);
+  }
 }
 
-function copyTablaItems(tablaItems) {
-  const textoItems = tablaItems.innerText;
+asyn function copyTablaItems(tablaItems) {
+  try {
+    const textoItems = tablaItems.innerText;
   navigator.clipboard.writeText(textoItems);
 
   alert("Tabla items copiada al portapapeles");
+  }
+  catch (err) {
+    console.error('Error al copiar al portapapeles:', err);
+  }
+  
 }
 
 
