@@ -1,4 +1,4 @@
-import { xmlRender } from "./xmlRender.js";
+import { xmlRender } from './xmlRender.js';
 
 const loadDoc = () => {
   fetch('./public/data.xml')
@@ -17,8 +17,7 @@ const loadDoc = () => {
 
     xmlRender(xmlDocumnet);
   }
-
-}
-
+};
+// Borrar
 
 window.onload = loadDoc();
