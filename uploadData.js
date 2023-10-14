@@ -1,8 +1,15 @@
 import { xmlRender } from './xmlRender.js';
+<<<<<<< HEAD
 
 document.querySelectorAll('input[type=file]').forEach(item => {
   item.addEventListener('change', e => {
     // console.log(e);
+=======
+// Borrar
+
+document.querySelectorAll('input[type=file]').forEach(item => {
+  item.addEventListener('change', e => {
+>>>>>>> newChanges
     const tablaSelected = item.getAttribute('tablaSelected');
     const fileInput = document.querySelector(`#${e.target.id}`);
 
@@ -19,6 +26,45 @@ document.querySelectorAll('input[type=file]').forEach(item => {
     }
   });
 });
+<<<<<<< HEAD
+=======
+
+/** Arrastrar y Soltar Archivo */
+//ondragover="allowDrop(event)" ondrop="handleFileDrop(event)
+document.querySelectorAll('.upload').forEach(item => {
+  item.addEventListener('dragover', allowDrop);
+});
+document.querySelectorAll('.upload').forEach(item => {
+  item.addEventListener('drop', handleFileDrop);
+});
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function handleFileDrop(event) {
+  event.preventDefault();
+  const tablaSelected = event.target.getAttribute('tablaSelected');
+  const dataTransfer = event.dataTransfer;
+
+  if (tablaSelected === 'pedido2') {
+    document.querySelector('.pedido2').style.display = 'flex';
+    document.querySelector('.pedido2').style.opacity = 1;
+  }
+
+  if (dataTransfer.files.length > 0) {
+    const file = dataTransfer.files[0];
+    const inputFile = document.getElementById('data');
+    inputFile.files = dataTransfer.files;
+
+    const nameArchivo = document.querySelector(`section.${tablaSelected} .nameArchivo`);
+    nameArchivo.setAttribute('data-tooltip', file.name);
+
+    readFile(file, tablaSelected);
+  }
+}
+// END
+>>>>>>> newChanges
 
 function readFile(file, tablaSelected) {
   const reader = new FileReader();

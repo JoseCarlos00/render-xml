@@ -6,7 +6,11 @@ document.querySelectorAll('.boton-copiar-info').forEach(item => {
     copyTablaInfo(tablaInfo);
   });
 });
+<<<<<<< HEAD
 
+=======
+// Borrar
+>>>>>>> newChanges
 document.querySelectorAll('.boton-copiar-items').forEach(item => {
   item.addEventListener('click', () => {
     const tablaSelected = item.getAttribute('tablaSelected');
@@ -14,6 +18,10 @@ document.querySelectorAll('.boton-copiar-items').forEach(item => {
     copyTablaItems(tablaItems);
   });
 });
+<<<<<<< HEAD
+=======
+// END
+>>>>>>> newChanges
 
 async function copyTablaInfo(tablaInfo) {
   try {
@@ -76,6 +84,7 @@ document.querySelectorAll('.container-tabla-items').forEach(item => {
     btnCopyItemsModify.style.opacity = 1;
   });
 });
+<<<<<<< HEAD
 
 // document.querySelectorAll('.container-tabla-items').forEach(item => {
 //   item.addEventListener('mouseout', () => {
@@ -105,12 +114,30 @@ for (let i = 0; i < items.length; i++) {
   btnCopyItemsModify[tablaSelected] = document.querySelector(
     `section.${tablaSelected} .container-boton-copiar-items-modify`
   );
+=======
+>>>>>>> newChanges
 
   item.addEventListener('mouseout', () => {
+<<<<<<< HEAD
     btnCopy[tablaSelected].style.opacity = 0;
     btnCopyItemsModify[tablaSelected].style.opacity = 0;
   });
 }
+=======
+    const tablaSelected = item.children[1].getAttribute('tablaSelected');
+    const btnCopy = document.querySelector(
+      `section.${tablaSelected} div.container-tabla-items div.boton-copiar-items`
+    );
+    const btnCopyItemsModify = document.querySelector(
+      `section.${tablaSelected} .container-boton-copiar-items-modify`
+    );
+
+    btnCopy.style.opacity = 0;
+    btnCopyItemsModify.style.opacity = 0;
+  });
+});
+
+>>>>>>> newChanges
 /** Copiar Items */
 // boton-copiar-items
 document.querySelectorAll('.boton-copiar-items-modify').forEach(item => {
