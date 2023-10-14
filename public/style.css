@@ -163,6 +163,15 @@ table.tabla-info {
     bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
   }
 
+  .button::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+
   .button::after,
   .button::before {
     opacity: 0;
@@ -232,7 +241,10 @@ table.tabla-info {
   }
 
   .button:hover:before {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+    width: 96%;
+    position: absolute;
+    bottom: -9px;
+    left: 0.15rem;
   }
 }
 
