@@ -8,7 +8,6 @@ document.querySelectorAll('input[type=file]').forEach(item => {
 
     // Aquí se ejecutará cuando el usuario seleccione un archivo
     const selectedFile = e.target.files[0]; // Obtiene el primer archivo seleccionado
-    const selectedFile = e.target.files[0]; // Obtiene el primer archivo seleccionado
 
     // Poner el nombre del archivo y tooltip
     const nameArchivo = document.querySelector(`section.${tablaSelected} .nameArchivo`);
