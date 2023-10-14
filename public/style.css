@@ -28,7 +28,6 @@ header {
     padding: 2px 8px;
     margin-right: 24px;
   }
-
 }
 
 main {
@@ -70,9 +69,7 @@ main {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 100px;
   position: relative;
-
 }
-
 
 /* Estilos Tablas */
 table,
@@ -109,7 +106,6 @@ table .tbody tr td {
 
 table .tbody > :nth-child(2n) {
   background-color: #bd9fda;
-  ;
 }
 
 table.tabla-info :is(th, td) {
@@ -129,9 +125,7 @@ table.tabla-info {
     border-bottom-color: #000;
   }
 }
-
 /* End Tablas */
-
 
 /* Boton de Upload */
 .container-archivos {
@@ -194,7 +188,7 @@ table.tabla-info {
   }
 
   .text {
-    top: 0
+    top: 0;
   }
 
   .text,
@@ -240,9 +234,7 @@ table.tabla-info {
   .button:hover:before {
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
   }
-
 }
-
 
 .mas-detalles {
   color: black;
@@ -283,7 +275,7 @@ table.tabla-info {
   background-color: transparent;
   font-size: 0.75rem;
   color: #111;
-  border-radius: .25em;
+  border-radius: 0.25em;
   text-align: justify;
 
   bottom: -41px !important;
@@ -302,7 +294,6 @@ table.tabla-info {
   visibility: visible;
 }
 
-
 @media (width <=728px) {
   .container-archivos {
     min-width: 0;
@@ -317,7 +308,6 @@ table.tabla-info {
 
 /* Boton Copiar Items */
 .container-boton-copiar-items-modify {
-
   width: fit-content;
   padding-bottom: 3px;
   transition: opacity 300ms ease-in 0s;
@@ -382,7 +372,7 @@ table.tabla-info {
   }
 
   .tooltip::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: calc(var(--tooltip-padding-y) / 2 * -1);
     width: var(--tooltip-padding-y);

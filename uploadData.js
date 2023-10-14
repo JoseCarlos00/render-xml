@@ -1,29 +1,26 @@
-import { xmlRender } from "./xmlRender.js";
+import { xmlRender } from './xmlRender.js';
 
-document.querySelectorAll("input[type=file]").forEach(item => {
-
-  item.addEventListener('change', (e) => {
+document.querySelectorAll('input[type=file]').forEach(item => {
+  item.addEventListener('change', e => {
     // console.log(e);
     const tablaSelected = item.getAttribute('tablaSelected');
-    const fileInput = document.querySelector(`#${e.target.id}`)
-    
+    const fileInput = document.querySelector(`#${e.target.id}`);
+
     // Aquí se ejecutará cuando el usuario seleccione un archivo
-    const selectedFile = e.target.files[ 0 ]; // Obtiene el primer archivo seleccionado
+    const selectedFile = e.target.files[0]; // Obtiene el primer archivo seleccionado
 
     // Poner el nombre del archivo y tooltip
-    const nameArchivo = document.querySelector(`section.${tablaSelected} .nameArchivo`)
-    nameArchivo.setAttribute('data-tooltip', selectedFile.name)
+    const nameArchivo = document.querySelector(`section.${tablaSelected} .nameArchivo`);
+    nameArchivo.setAttribute('data-tooltip', selectedFile.name);
 
     if (selectedFile) {
       // Llama a una función para leer el contenido del archivo
       readFile(selectedFile, tablaSelected);
     }
-  })
-})
-
+  });
+});
 
 function readFile(file, tablaSelected) {
-  
   const reader = new FileReader();
   reader.onload = function (e) {
     // La función onload se ejecuta cuando se completa la lectura del archivo
@@ -36,7 +33,7 @@ function readFile(file, tablaSelected) {
     const table = document.querySelector(`main > section.${tablaSelected}  .table`);
     const tbody = document.querySelector(`main > section.${tablaSelected}  .table  .tbody`);
     const newTbody = document.createElement('tbody');
-    newTbody.classList.add('tbody')
+    newTbody.classList.add('tbody');
 
     table.replaceChild(newTbody, tbody);
     xmlRender(xmlDocumnet, tablaSelected);

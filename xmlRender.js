@@ -1,7 +1,7 @@
 export function xmlRender(xmlDocumnet, table) {
-  let tablaSelected = table ?? "pedido1";
+  let tablaSelected = table ?? 'pedido1';
 
-  const sku = xmlDocumnet.querySelectorAll("SKU");
+  const sku = xmlDocumnet.querySelectorAll('SKU');
 
   //Obteniendo datos de las cabeceras
   const customer = xmlDocumnet.querySelector('Customer > Customer').innerHTML;
@@ -23,9 +23,10 @@ export function xmlRender(xmlDocumnet, table) {
   tagShitToName.innerHTML = shipToName;
   tagShipmentId.innerHTML = shipmentId;
 
-
   //Agreganddo atributos a los elementos de Thead
-  const elementosThead = document.querySelectorAll(`main > section.${tablaSelected} > table > thead > tr`);
+  const elementosThead = document.querySelectorAll(
+    `main > section.${tablaSelected} > table > thead > tr`
+  );
 
   elementosThead.forEach((tr, index) => {
     if (index !== elementosThead.length - 1) {
@@ -36,7 +37,7 @@ export function xmlRender(xmlDocumnet, table) {
   //Tabla Body
   const tbody = document.querySelector(`body > main  section.${tablaSelected}  table  .tbody`);
 
-  sku.forEach((item) => {
+  sku.forEach(item => {
     const tr = document.createElement('tr');
     const tdNumero = document.createElement('td');
     const tdItem = document.createElement('td');
@@ -45,7 +46,6 @@ export function xmlRender(xmlDocumnet, table) {
     const tags = item.childNodes;
 
     tags.forEach((children, index) => {
-
       if (index === 3) {
         tdItem.innerHTML = children.innerHTML;
       }
@@ -56,16 +56,17 @@ export function xmlRender(xmlDocumnet, table) {
       tr.appendChild(tdNumero);
       tr.appendChild(tdItem);
       tr.appendChild(tdQuantity);
-    })
-    tbody.appendChild(tr)
-  })
-
-  /**Enumerar fila */
-  const tdbody = document.querySelector(`body > main > section.${tablaSelected} table  .tbody`).childNodes;
-  let iterador = 1;
-
-  tdbody.forEach((tr) => {
-    tr.firstElementChild.innerHTML = iterador++;
+    });
+    tbody.appendChild(tr);
   });
 
+  /**Enumerar fila */
+  const tdbody = document.querySelector(
+    `body > main > section.${tablaSelected} table  .tbody`
+  ).childNodes;
+  let iterador = 1;
+
+  tdbody.forEach(tr => {
+    tr.firstElementChild.innerHTML = iterador++;
+  });
 }
