@@ -1,15 +1,7 @@
 import { xmlRender } from './xmlRender.js';
-<<<<<<< HEAD
 
 document.querySelectorAll('input[type=file]').forEach(item => {
   item.addEventListener('change', e => {
-    // console.log(e);
-=======
-// Borrar
-
-document.querySelectorAll('input[type=file]').forEach(item => {
-  item.addEventListener('change', e => {
->>>>>>> newChanges
     const tablaSelected = item.getAttribute('tablaSelected');
     const fileInput = document.querySelector(`#${e.target.id}`);
 
@@ -26,8 +18,6 @@ document.querySelectorAll('input[type=file]').forEach(item => {
     }
   });
 });
-<<<<<<< HEAD
-=======
 
 /** Arrastrar y Soltar Archivo */
 //ondragover="allowDrop(event)" ondrop="handleFileDrop(event)
@@ -64,7 +54,6 @@ function handleFileDrop(event) {
   }
 }
 // END
->>>>>>> newChanges
 
 function readFile(file, tablaSelected) {
   const reader = new FileReader();

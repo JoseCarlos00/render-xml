@@ -1,31 +1,10 @@
-/** Boton copiar Tablas */
-document.querySelectorAll('.boton-copiar-info').forEach(item => {
-  item.addEventListener('click', () => {
-    const tablaSelected = item.getAttribute('tablaSelected');
-    const tablaInfo = document.querySelector(`.${tablaSelected}  .tabla-info`);
-    copyTablaInfo(tablaInfo);
-  });
-});
-<<<<<<< HEAD
-
-=======
-// Borrar
->>>>>>> newChanges
-document.querySelectorAll('.boton-copiar-items').forEach(item => {
-  item.addEventListener('click', () => {
-    const tablaSelected = item.getAttribute('tablaSelected');
-    const tablaItems = document.querySelector(`.${tablaSelected}  .tabla-items`);
-    copyTablaItems(tablaItems);
-  });
-});
-<<<<<<< HEAD
-=======
-// END
->>>>>>> newChanges
-
-async function copyTablaInfo(tablaInfo) {
+/**
+ * Funcion para copiar una tabla al Portapapeles
+ * @param {*} table Tabla con la informacion para Copiar
+ */
+async function copyTable(table) {
   try {
-    const textoInfo = tablaInfo.innerText;
+    const textoInfo = table.innerText;
     await navigator.clipboard.writeText(textoInfo);
 
     document.querySelector('#alerta-copy').style.opacity = 1;
@@ -37,21 +16,47 @@ async function copyTablaInfo(tablaInfo) {
   }
 }
 
-async function copyTablaItems(tablaItems) {
-  try {
-    const textoItems = tablaItems.innerText;
-    navigator.clipboard.writeText(textoItems);
+/** Boton copiar Tablas */
+document.querySelectorAll('.boton-copiar-info').forEach(item => {
+  item.addEventListener('click', () => {
+    const tablaSelected = item.getAttribute('tablaSelected');
+    const tablaInfo = document.querySelector(`.${tablaSelected}  .tabla-info`);
+    copyTable(tablaInfo);
+  });
+});
 
-    document.querySelector('#alerta-copy').style.opacity = 1;
-    setTimeout(() => {
-      document.querySelector('#alerta-copy').style.opacity = 0;
-    }, 4000);
-  } catch (err) {
-    console.error('Error al copiar al portapapeles:', err);
-  }
-}
+document.querySelectorAll('.boton-copiar-items').forEach(item => {
+  item.addEventListener('click', () => {
+    const tablaSelected = item.getAttribute('tablaSelected');
+    const tablaItems = document.querySelector(`.${tablaSelected}  .tabla-items`);
+    copyTable(tablaItems);
+  });
+});
+// END
 
-/** Boton Copiar hover */
+/** Copiar Items Para SQL*/
+document.querySelectorAll('.boton-copiar-items-modify').forEach(item => {
+  item.addEventListener('click', async () => {
+    try {
+      const tablaSelected = item.getAttribute('tablaSelected');
+      const tablaItems = document.querySelector(`.${tablaSelected}  .tabla-items`);
+      const items = tablaItems.children[1].childNodes;
+      const textoItems = [];
+
+      items.forEach(item => {
+        textoItems.push(`'${item.children[1].innerText}',`);
+      });
+
+      const textoACopiar = textoItems.join('\n');
+      await navigator.clipboard.writeText(textoACopiar);
+      // alert("Tabla items copiada al portapapeles");
+    } catch (err) {
+      console.error('Error al copiar al portapapeles:', err);
+    }
+  });
+});
+
+/** Ocultar y Mostrar Botones de copiar */
 /** TabláInfo */
 document.querySelectorAll('.container-tabla-info').forEach(item => {
   item.addEventListener('mouseover', () => {
@@ -84,46 +89,9 @@ document.querySelectorAll('.container-tabla-items').forEach(item => {
     btnCopyItemsModify.style.opacity = 1;
   });
 });
-<<<<<<< HEAD
 
-// document.querySelectorAll('.container-tabla-items').forEach(item => {
-//   item.addEventListener('mouseout', () => {
-//     const tablaSelected = item.children[1].getAttribute('tablaSelected');
-//     const btnCopy = document.querySelector(
-//       `section.${tablaSelected} div.container-tabla-items div.boton-copiar-items`
-//     );
-//     const btnCopyItemsModify = document.querySelector(
-//       `section.${tablaSelected} .container-boton-copiar-items-modify`
-//     );
-
-//     btnCopy.style.opacity = 0;
-//     btnCopyItemsModify.style.opacity = 0;
-//   });
-// });
-
-const items = document.getElementsByClassName('container-tabla-items');
-const btnCopy = {};
-const btnCopyItemsModify = {};
-
-for (let i = 0; i < items.length; i++) {
-  const item = items[i];
-  const tablaSelected = item.children[1].getAttribute('tablaSelected');
-  btnCopy[tablaSelected] = document.querySelector(
-    `section.${tablaSelected} div.container-tabla-items div.boton-copiar-items`
-  );
-  btnCopyItemsModify[tablaSelected] = document.querySelector(
-    `section.${tablaSelected} .container-boton-copiar-items-modify`
-  );
-=======
->>>>>>> newChanges
-
+document.querySelectorAll('.container-tabla-items').forEach(item => {
   item.addEventListener('mouseout', () => {
-<<<<<<< HEAD
-    btnCopy[tablaSelected].style.opacity = 0;
-    btnCopyItemsModify[tablaSelected].style.opacity = 0;
-  });
-}
-=======
     const tablaSelected = item.children[1].getAttribute('tablaSelected');
     const btnCopy = document.querySelector(
       `section.${tablaSelected} div.container-tabla-items div.boton-copiar-items`
@@ -136,27 +104,4 @@ for (let i = 0; i < items.length; i++) {
     btnCopyItemsModify.style.opacity = 0;
   });
 });
-
->>>>>>> newChanges
-/** Copiar Items */
-// boton-copiar-items
-document.querySelectorAll('.boton-copiar-items-modify').forEach(item => {
-  item.addEventListener('click', async () => {
-    try {
-      const tablaSelected = item.getAttribute('tablaSelected');
-      const tablaItems = document.querySelector(`.${tablaSelected}  .tabla-items`);
-      const items = tablaItems.children[1].childNodes;
-      const textoItems = [];
-
-      items.forEach(item => {
-        textoItems.push(`'${item.children[1].innerText}',`);
-      });
-
-      const textoACopiar = textoItems.join('\n');
-      await navigator.clipboard.writeText(textoACopiar);
-      // alert("Tabla items copiada al portapapeles");
-    } catch (err) {
-      console.error('Error al copiar al portapapeles:', err);
-    }
-  });
-});
+// END btn hover

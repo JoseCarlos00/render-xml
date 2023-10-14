@@ -18,9 +18,5 @@ const loadDoc = () => {
     xmlRender(xmlDocumnet);
   }
 };
-<<<<<<< HEAD
-=======
-// Borrar
->>>>>>> newChanges
 
 window.onload = loadDoc();

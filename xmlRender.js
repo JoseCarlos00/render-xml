@@ -1,10 +1,5 @@
 export function xmlRender(xmlDocumnet, table) {
   let tablaSelected = table ?? 'pedido1';
-<<<<<<< HEAD
-
-=======
-  // Borrar
->>>>>>> newChanges
   const sku = xmlDocumnet.querySelectorAll('SKU');
 
   //Obteniendo datos de las cabeceras
