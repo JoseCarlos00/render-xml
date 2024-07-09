@@ -36,15 +36,23 @@ document.querySelectorAll('.boton-copiar-items').forEach(item => {
 
 /** Copiar Items Para SQL*/
 document.querySelectorAll('.boton-copiar-items-modify').forEach(item => {
-  item.addEventListener('click', async () => {
+  item.addEventListener('click', async function () {
     try {
       const tablaSelected = item.getAttribute('tablaSelected');
+      const dataSet = this.dataset['typeCode'];
+
       const tablaItems = document.querySelector(`.${tablaSelected}  .tabla-items`);
-      const items = tablaItems.children[1].childNodes;
+
+      const TrItems = tablaItems.children[1].childNodes;
+
       const textoItems = [];
 
-      items.forEach(item => {
-        textoItems.push(`'${item.children[1].innerText}',`);
+      TrItems.forEach(item => {
+        if (dataSet === 'SQL') {
+          textoItems.push(`'${item.children[1].innerText}',`);
+        } else if (dataSet === 'Values') {
+          textoItems.push(`('${item.children[1].innerText}'),`);
+        }
       });
 
       const textoACopiar = textoItems.join('\n');

@@ -125,6 +125,21 @@ table.tabla-info {
   & tr:last-child th {
     border-bottom-color: #000;
   }
+
+  tr td {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    width: 225px;
+
+    span {
+      overflow: hidden;
+      text-wrap: nowrap;
+      text-overflow: ellipsis;
+      display: inline-block;
+      width: inherits;
+    }
+  }
 }
 /* End Tablas */
 
